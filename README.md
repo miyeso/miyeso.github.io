@@ -1,2 +1,0 @@
-# miyeso.github.io
-Project
