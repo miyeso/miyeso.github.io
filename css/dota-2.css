@@ -1,0 +1,639 @@
+@font-face{
+	font-family: 'Open Sans Condensed';
+	src:url("../fonts/OpenSansCondensed-Light.ttf") format("truetype");
+}
+font-face{
+	font-family: 'Anton';
+	src:url("../fonts/Anton-Regular.ttf") format("truetype");
+	
+}
+body{
+	margin: 0;
+	padding:0;
+	font-family: 'Open Sans Condensed', sans-serif;
+}
+.preload * {
+  -webkit-transition: all 0s linear;
+  -moz-transition: all 0s linear;
+  -ms-transition: all 0s linear;
+  -o-transition: all 0s linear;
+}
+.header{
+	margin: 0 auto;
+	width: 100%;
+	padding:0;
+	height: 100px;
+	background-color: #000;
+}
+.container{
+	max-width: 1150px;
+	margin: 0 auto;
+	padding:0;
+}
+.header_logo{
+	width: 80px;
+	float: left;
+	filter: invert(100%);
+}
+
+.main-menu{
+	text-align: center;
+	margin: 0;
+	display: flex;
+	justify-content: flex-end;
+	flex-wrap: wrap;
+	position: relative;
+
+}
+.main-menu > li{
+	list-style: none;
+	text-transform: uppercase;
+	font-size: 18px;
+	font-weight: 600;
+	letter-spacing: 2px;
+	padding: 2px 40px;
+	line-height: 90px;
+}
+.main-menu a.icon{
+	display: none;
+}
+.main-menu a{
+	text-decoration:none;
+	color: #fff;
+	border-bottom:2px solid rgba(255,255,255,0);
+	transition: border 0.5s ease-in-out;
+}
+.main-menu a:hover{
+	border-bottom:2px solid #fff;
+}
+.submenu {
+  position: absolute;
+  right: 41%;
+  padding: 0;
+  margin: 0;
+  width: 210px;
+  background: rgba(255, 255, 255,1);
+  visibility: hidden;
+  opacity: 0;
+  transform: scale(.8);
+  transition: .4s ease-in-out;
+  z-index: 4;
+}
+.submenu-item{
+	list-style:none;
+	line-height: 50px;	
+    color: #000;
+    font-size: 14px;
+    transition: all .3s ease-in-out;
+}
+.submenu-item:hover{
+	color: #E6855F;
+}
+.submenu li a {
+  font-size: 14px;
+  color: #fff;
+}
+.main-menu > li:hover .submenu {
+  visibility: visible;
+  opacity: 1;
+  transform: scale(1);
+}
+
+
+
+
+.main-caption{
+	height: 250px;
+	width: 100%;
+	line-height: 160px;
+	background: linear-gradient(to top, #6a0101 0%, #ff0000 100%);
+}
+.main-caption h2{
+	text-align: center;
+	font-size: 50px;
+	margin: 0;
+	padding: 20px 0;
+	color: #fff;
+	height: 100px;
+	text-transform: uppercase;
+	font-family: 'Anton', sans-serif;
+}
+.main-caption-hr{
+	width: 20%;
+	height: 5px;
+	border:none;
+	background:#fff;
+}
+.main-caption p{
+	text-align: center;
+	margin: 0;
+	padding:0;
+	line-height: 0;
+}
+.video-button{
+	background-color: rgba(255,255,255,0);
+	border:2px solid #fff;
+	color: #fff;
+	padding:10px;
+	font-size: 18px;
+	transition: all .5s ease-in-out;
+	margin-top: 15px;
+	cursor: pointer;
+	outline: none;
+}
+.video-button:hover{
+	transform:scale(1.1);
+	color: #fff;
+}
+
+
+.ass2-story{
+	margin: 0;
+	background-image: url("../images/assassincreed2-storybg1.jpg");
+	background-size: cover;
+	background-position: top center;
+	width: 100%;
+	height: 600px;
+}
+.ass2-story-content{
+	text-shadow: 1px 1px 1px black;
+	color: #fff;
+	justify-content: center;
+	padding-top: 300px;
+}
+.ass2-story-content h2{
+	text-align: center;
+	font-size: 42px;
+	text-transform: uppercase;
+	background-color: rgba(160,1,1,0.5);
+	border-radius: 5px;
+	margin:0 100px;
+}
+.ass2-story-content p{
+	font-size: 22px;
+	margin: 10px 150px;
+	font-weight: bold;
+	text-align: center;
+	background-color: rgba(160,1,1,0.5);
+	border-radius: 5px;
+	padding: 20px;
+}
+
+
+
+
+.features{
+	width: 100%;
+	background-color: #420000;
+	padding: 50px 0;
+}
+.features-block{
+	padding: 50px 0;
+	width: 100%;
+	height: auto;
+	position: relative;
+	perspective: 1000px;
+	margin-bottom: 30px;
+	display: flex;
+	justify-content: space-around;
+}
+.features-text{
+	width: 600px;
+	background-color: #fff;
+	border: 1px solid #c20000;
+	border-radius: 5px;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	transform: rotateY(-15deg);
+	outline: 1px solid rgba(1,1,1,0);
+	z-index: 3;
+	position: relative;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+}
+.features-text:nth-child(odd){
+	left: 0;
+	transform: rotateY(15deg);
+}
+.features-text h2{
+	font-size: 35px;
+	margin: 0;
+	width: 100%;
+	padding:15px 0 5px 0;
+	text-align: center;
+	text-transform: uppercase;
+	background-color: #c20000;
+	color: #fff;
+}
+.features-text p{
+	font-size: 20px;
+	font-weight: bold;
+	text-align: center;
+	margin-top:0;
+	padding: 20px 20px;
+}
+.features-img{
+	margin-right: 300px;
+}
+.features-img-left{
+	margin-left: 300px;
+}
+.features-block-footer{
+	width: 100%;
+	height: 30px;
+	position: absolute;
+	background-color: #c20000;
+	bottom: 0;
+}
+
+
+
+
+.game{
+	padding: 50px 0;
+	display: flex;
+}
+.game-content{
+	display: flex;
+	justify-content: flex-start;
+}
+.game-image{
+	margin-left: 130px;
+	border: 1px solid #420000;
+}
+.game-description{
+	display: flex;
+	flex-direction: column;
+	width:50%;
+	float: right;
+	font-size: 18px;
+	text-align: justify;
+	margin-left: 30px;
+	font-family: 'Anton', sans-serif;
+}
+.game-description p{
+	margin:0;
+	padding-top: 10px;
+}
+.game-description p:first-child{
+	text-indent: 1.25em;
+}
+.game-description img{
+	border: 1px solid #420000;
+}
+
+
+.dlc{
+	background-color: #420000;
+	padding:20px 0;
+}
+.dlc h2{
+	text-align: center;
+	margin:0;
+	text-transform: uppercase;
+	font-size: 30px;
+	font-weight: bold;
+	color: #fff;
+	padding:30px;
+}
+.brotherhood{
+	width: 1067px;
+	height:500px;
+	background:url('../images/dlc-brotherhood.jpg') center center;
+	background-size: cover;
+	margin: 0 auto;
+	margin-bottom: 50px;
+	position: relative;
+}
+.brotherhood p{
+	background-color: rgba(1,1,1,0.7);
+	position: absolute;
+	margin: 0;
+	bottom:0;
+	color: #fff;
+	font-size: 20px;
+	font-weight: bold;
+	padding:15px 20px;
+
+}
+.brotherhood h2{
+	background-color: rgba(1,1,1,1);
+	position: absolute;
+	margin: 0;
+	top:0;
+	color: #fff;
+	font-size: 20px;
+	font-weight: bold;
+	padding:10px 0;
+	width: 100%;
+	text-align: center;
+	border-bottom: 2px solid #f00;
+
+}
+
+.revelations{
+	width: 1067px;
+	height:500px;
+	background:url('../images/dlc-revelations.jpg') center center;
+	background-size: cover;
+	margin: 0 auto;
+	margin-bottom: 50px;
+	position: relative;
+}
+.revelations p{
+	background-color: rgba(1,1,1,0.7);
+	position: absolute;
+	margin: 0;
+	bottom:0;
+	color: #fff;
+	font-size: 20px;
+	font-weight: bold;
+	padding:15px 20px;
+
+}
+.revelations h2{
+	background-color: rgba(1,1,1,1);
+	position: absolute;
+	margin: 0;
+	top:0;
+	color: #fff;
+	font-size: 20px;
+	font-weight: bold;
+	padding:10px 0;
+	width: 100%;
+	text-align: center;
+	border-bottom: 2px solid #f00;
+}
+
+
+
+.footer{
+	background-color: #000;
+}
+.social-networks img{
+	width: 32px;
+	height: 32px;
+	margin-right: 3px;
+	transition: all .5s ease-in-out;
+	filter: invert(100%);
+}
+.social-networks img:hover{
+	transform: translateY(-4px);
+}
+.copyright p {
+	color: #fff;
+	font-size: 16px;
+	margin:0;
+}
+.footer-content{
+	display: flex;
+	justify-content: space-between;
+	text-align: center;
+	align-items: center;
+	padding: 30px 0;
+}
+
+
+
+
+
+@media (max-width: 1200px) { 
+	.features-text{
+		margin:0;
+		margin-right: 50px;
+	}
+	.features-text:nth-child(odd){
+		margin-left: 50px;
+	}
+ }
+@media (min-width: 992px) and (max-width: 1199px) { 
+	.features-img{
+		width: 600px;
+	}
+	.features-img-left{
+		width: 600px;
+	}
+	.features-text{
+		width: 550px;
+		margin:0;
+		margin-right: 50px;
+	}
+	.features-text:nth-child(odd){
+		margin-left: 50px;
+	}
+	.features-text h2{
+		font-size: 32px;
+	}
+	.features-text p{
+		font-size: 18px;
+	}
+	.brotherhood{
+		width: 950px;
+	}
+	.revelations{
+		width: 950px;
+	}
+	.footer-content{
+		justify-content: space-around;
+	}
+	
+}
+
+
+@media (min-width: 768px) and (max-width: 991px) {
+	
+	.footer-content{
+		justify-content: space-around;
+	}
+	.main-menu  li{
+		font-size: 16px;
+		padding: 2px 20px;
+	}
+	.ass2-story-content h2{
+		font-size: 38px;
+	}
+	.ass2-story-content p{
+		font-size: 18px;
+		margin: 10px 100px;
+		padding: 20px;
+	}	
+
+	.features-img{
+		width: 500px;
+		margin-right: 200px;
+	}
+	.features-img-left{
+		width: 500px;
+		margin-left: 200px;
+	}
+	.features-text{
+		width: 450px;
+		margin:0;
+		margin-right: 100px;
+	}
+	.features-text:nth-child(odd){
+		margin-left: 100px;
+	}
+	.features-text h2{
+		font-size: 24px;
+		padding-top: 5px;
+	}
+	.features-text p{
+		font-size: 14px;
+		margin-bottom: 20px;
+		padding: 10px;
+	}
+	.features-block-footer{
+	height: 20px;
+	}
+	.game-description{
+		font-size: 14px;
+		width: 50%;
+	}
+	.game-image{
+		margin-left: 70px;
+		margin-top: 30px;
+		width: 200px;
+		height: 310px;
+	}
+	.game-description img{
+		width: 233px;
+		height: 90px;
+	}
+	.game-image{
+		width:297px; 
+		height:420px;
+		margin-top: 10px;
+	}
+	.brotherhood{
+		width: 700px;
+	}
+	.brotherhood p{
+		font-size: 18px;
+	}
+	.revelations{
+		width: 700px;
+	}
+	.revelations p{
+		font-size: 18px;
+	}
+	.game-description{
+		font-size: 12px;
+	}
+	.game-description img{
+		width:180px;
+		height: 80px;
+	}
+	.game-image{
+		width: 200px;
+		height: 310px;
+		margin: 0;
+		margin-left: 120px;
+	}
+}
+
+
+
+@media (min-width: 576px) and (max-width: 767px) { 
+		
+	.main-caption h2{
+		font-size: 40px;
+	}
+	.video-button{
+		font-size: 14px;
+	}
+
+	.footer-content{
+		justify-content: space-around;
+	}
+
+	.main-menu  li{
+		font-size: 14px;
+		padding: 2px 15px;
+	}
+	.ass2-story-content h2{
+		font-size: 24px;
+		margin-top: 90px;
+	}
+	.ass2-story-content p{
+		font-size: 16px;
+		margin: 10px 20px;
+		padding: 20px;
+	}	
+	.features-img{
+		width: 400px;
+		margin-right: 100px;
+	}
+	.features-img-left{
+		width: 400px;
+		margin-left: 100px;
+	}
+	.features-text{
+		width: 350px;
+		margin:0;
+		margin-right: 50px;
+	}
+	.features-text:nth-child(odd){
+		margin-left: 50px;
+	}
+	.features-text h2{
+		font-size: 16px;
+		padding-top: 5px;
+	}
+	.features-text p{
+		font-size: 10px;
+		margin-bottom: 15px;
+		padding: 10px;
+	}
+	.features-block-footer{
+		height: 15px;
+	}
+
+	.game-image{
+		width: 110px;
+		height: 180px;
+		margin: 0;
+		margin-left: 20px;
+	}
+	.game-description img{
+		width: 170px;
+		height: 60px;
+	}
+	.brotherhood{
+		width: 550px;
+	}
+	.brotherhood p{
+		font-size: 14px;
+	}
+	.revelations{
+		width: 550px;
+	}
+	.revelations p{
+		font-size: 14px;
+	}
+	.game-description{
+		font-size: 11px;
+		margin-left: 10px;
+	}
+	.game-description img{
+		width:150px;
+		height: 60px;
+	}
+	.game-image{
+		width: 200px;
+		height: 310px;
+		margin:0;
+		margin-left: 40px;
+	}
+	.dlc h2{
+		font-size: 24px;
+	}
+	.features-text{
+	transform: rotateY(0deg);
+	}
+	.features-text:nth-child(odd){
+	transform: rotateY(0deg);
+	}
+}
